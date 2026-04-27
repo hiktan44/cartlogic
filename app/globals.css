@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-muted: #dbeafe;
+  --color-secondary: #10b981;
+  --color-secondary-hover: #059669;
+  --color-secondary-muted: #d1fae5;
+  --color-background: #f8fafc;
+  --color-background-dark: #0f172a;
+  --color-surface: #ffffff;
+  --color-surface-dark: #1e293b;
+  --color-surface-elevated: #f1f5f9;
+  --color-surface-elevated-dark: #334155;
+  --color-text: #0f172a;
+  --color-text-dark: #f1f5f9;
+  --color-text-muted: #64748b;
+  --color-text-muted-dark: #94a3b8;
+  --color-accent: #8b5cf6;
+  --color-accent-hover: #7c3aed;
+  --color-accent-muted: #ede9fe;
+  --color-node-trigger: #8b5cf6;
+  --color-node-ai: #f97316;
+  --color-node-action: #10b981;
+  --color-node-condition: #f59e0b;
+  --color-error: #ef4444;
+  --color-error-muted: #fee2e2;
+  --color-success: #10b981;
+  --color-success-muted: #d1fae5;
+  --color-warning: #f59e0b;
+  --color-warning-muted: #fef3c7;
+  --color-border: #e2e8f0;
+  --color-border-dark: #334155;
+
+  --font-sans: Inter, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", Consolas, monospace;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  --shadow-node: 0 4px 24px 0 rgb(37 99 235 / 0.12);
+
+  --animate-duration-fast: 150ms;
+  --animate-duration-normal: 250ms;
+  --animate-duration-slow: 400ms;
+}
+
+:root {
+  --bg: #f8fafc;
+  --fg: #0f172a;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #0f172a;
+  --fg: #f1f5f9;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-16px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(37 99 235 / 0.4); }
+  50% { box-shadow: 0 0 0 8px rgb(37 99 235 / 0); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.4s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #2563eb, #8b5cf6, #10b981);
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* React Flow overrides */
+.react-flow__node {
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.react-flow__edge-path {
+  stroke-width: 2;
+}
+
+.react-flow__controls {
+  border-radius: 8px;
+  overflow: hidden;
+}

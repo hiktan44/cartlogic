@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="logo-bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+    <linearGradient id="accent-line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="16" cy="16" r="1" fill="rgba(255,255,255,0.04)"/>
+    </pattern>
+    <filter id="glow-purple" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glow-orange" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glow-green" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Vertical divider (subtle) -->
+  <line x1="580" y1="60" x2="580" y2="570" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- ======================== LEFT SECTION ======================== -->
+
+  <!-- Logo icon (64x64 scaled to 96x96 via transform) -->
+  <g transform="translate(72, 170) scale(1.5)">
+    <rect width="64" height="64" rx="12" fill="url(#logo-bg)"/>
+    <line x1="14" y1="44" x2="32" y2="16" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="32" y1="16" x2="50" y2="44" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="14" y1="44" x2="50" y2="44" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="14" cy="44" r="6" fill="#a78bfa"/>
+    <polygon points="32,10 37.2,13 37.2,19 32,22 26.8,19 26.8,13" fill="#fb923c"/>
+    <circle cx="50" cy="44" r="6" fill="#34d399"/>
+  </g>
+
+  <!-- App name -->
+  <text x="72" y="336" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="84" font-weight="700" fill="#ffffff" letter-spacing="-2">CartLogic</text>
+
+  <!-- Tagline -->
+  <text x="72" y="388" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="26" font-weight="400" fill="#93c5fd">AI-Powered E-Commerce Automation</text>
+
+  <!-- Accent line -->
+  <rect x="72" y="416" width="320" height="3" rx="2" fill="url(#accent-line)"/>
+
+  <!-- Description -->
+  <text x="72" y="454" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="19" fill="#64748b">Build powerful AI workflows for your store in minutes.</text>
+  <text x="72" y="480" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="19" fill="#64748b">No code. No complexity. Just growth.</text>
+
+  <!-- Badge -->
+  <rect x="72" y="524" width="180" height="40" rx="20" fill="rgba(37,99,235,0.2)" stroke="#2563eb" stroke-width="1"/>
+  <text x="162" y="549" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#93c5fd" text-anchor="middle">cartlogic.io</text>
+
+  <!-- ======================== RIGHT SECTION ======================== -->
+
+  <!-- Glow halos (drawn first, behind nodes) -->
+  <circle cx="755" cy="455" r="90" fill="#8b5cf6" opacity="0.10"/>
+  <circle cx="890" cy="195" r="105" fill="#f97316" opacity="0.10"/>
+  <circle cx="1075" cy="450" r="90" fill="#10b981" opacity="0.10"/>
+
+  <!-- Connection path: Trigger -> AI (dashed) -->
+  <path d="M755,401 C760,320 820,270 824,244"
+        stroke="#475569" stroke-width="2" fill="none"
+        stroke-dasharray="8,5" stroke-linecap="round"/>
+
+  <!-- Arrow head Trigger -> AI -->
+  <polygon points="824,244 814,252 826,256" fill="#475569" opacity="0.7"/>
+
+  <!-- Connection path: AI -> Action (dashed) -->
+  <path d="M936,244 C965,300 1040,380 1035,396"
+        stroke="#475569" stroke-width="2" fill="none"
+        stroke-dasharray="8,5" stroke-linecap="round"/>
+
+  <!-- Arrow head AI -> Action -->
+  <polygon points="1035,396 1025,387 1030,399" fill="#475569" opacity="0.7"/>
+
+  <!-- Trigger node (bottom-left) - purple circle -->
+  <circle cx="755" cy="455" r="54" fill="#7c3aed"/>
+  <circle cx="755" cy="455" r="54" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0.6"/>
+  <text x="755" y="446" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.7)" text-anchor="middle" letter-spacing="1">TRIGGER</text>
+  <text x="755" y="466" font-family="Inter, system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)" text-anchor="middle">New Order</text>
+
+  <!-- AI node (top-center) - orange hexagon -->
+  <!-- Hexagon center (890, 195), circumradius=65 -->
+  <polygon points="890,130 946.3,162.5 946.3,227.5 890,260 833.7,227.5 833.7,162.5" fill="#c2410c"/>
+  <polygon points="890,130 946.3,162.5 946.3,227.5 890,260 833.7,227.5 833.7,162.5" fill="none" stroke="#fb923c" stroke-width="2" opacity="0.6"/>
+  <text x="890" y="186" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.7)" text-anchor="middle" letter-spacing="1">AI NODE</text>
+  <text x="890" y="206" font-family="Inter, system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)" text-anchor="middle">Analyze Sentiment</text>
+
+  <!-- Action node (bottom-right) - green circle -->
+  <circle cx="1075" cy="450" r="54" fill="#065f46"/>
+  <circle cx="1075" cy="450" r="54" fill="none" stroke="#34d399" stroke-width="2" opacity="0.6"/>
+  <text x="1075" y="441" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.7)" text-anchor="middle" letter-spacing="1">ACTION</text>
+  <text x="1075" y="461" font-family="Inter, system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)" text-anchor="middle">Send Email</text>
+
+  <!-- "Workflow Builder" label above the visualization -->
+  <text x="890" y="100" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="500" fill="#475569" text-anchor="middle" letter-spacing="2">VISUAL WORKFLOW BUILDER</text>
+</svg>
